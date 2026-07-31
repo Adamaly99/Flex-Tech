@@ -3,54 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Détail Produit | FlexTech</title>
-  <meta name="description" content="Détail complet du produit FlexTech.">
+  <title>Produits | FlexTech</title>
+  <meta name="description" content="Découvrez tous les produits FlexTech : PC portables, PC gamer, moniteurs, accessoires et plus.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0D6EFD">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="FlexTech Logo">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Accueil FlexTech">
+        <img src="assets/images/logo.png" alt="Logo FlexTech">
       </a>
-      <nav class="nav">
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" id="nav-menu">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="produits.html">Produits</a></li>
+          <li><a href="produits.html" class="active">Produits</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <a href="#" class="cart-icon">🛒<span class="cart-count">0</span></a>
+
+      <a href="https://wa.me/221770000000" class="cart-icon" target="_blank" rel="noopener">
+        💬 <span class="cart-count">WhatsApp</span>
+      </a>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="product-detail">
-        <div class="product-detail-image">
-          <img src="assets/images/hp-elitebook.jpg" alt="HP EliteBook 840 G8">
-        </div>
-        <div class="product-detail-info">
-          <h1>HP EliteBook 840 G8</h1>
-          <p class="product-specs">Core i5 • 16Go RAM • SSD 512Go</p>
-          <p class="product-price">299 000 FCFA</p>
-          <div class="product-rating">★★★★★</div>
-          <p>
-            Ordinateur portable professionnel, idéal pour le travail, les études et la bureautique.
-          </p>
-          <a href="https://wa.me/221770000000?text=Je suis intéressé par le HP EliteBook 840 G8" class="btn-whatsapp" target="_blank">
-            Commander sur WhatsApp
-          </a>
-        </div>
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <h1 class="section-title">Tous nos produits</h1>
+        <p class="page-subtitle">Sélection de matériel informatique pour le travail, les études et le gaming.</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section products">
+      <div class="container">
+        <div class="products-grid" id="all-products"></div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -61,5 +63,6 @@
   </footer>
 
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/products.js"></script>
 </body>
 </html>
