@@ -3,69 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | FlexTech</title>
   <meta name="description" content="Contactez FlexTech pour vos besoins en ordinateurs, accessoires et services informatiques.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0D6EFD">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="FlexTech Logo">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Accueil FlexTech">
+        <img src="assets/images/logo.png" alt="Logo FlexTech">
       </a>
-      <nav class="nav">
+
+      <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" id="nav-menu">
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="produits.html">Produits</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
-      <a href="#" class="cart-icon">🛒<span class="cart-count">0</span></a>
+
+      <a href="https://wa.me/221770000000" class="cart-icon" target="_blank" rel="noopener">
+        💬 <span class="cart-count">WhatsApp</span>
+      </a>
     </div>
   </header>
 
-  <section class="section contact">
-    <div class="container">
-      <h1 class="section-title">Nous Contacter</h1>
-
-      <form class="contact-form fade-in">
-        <div class="form-group">
-          <label for="name">Nom complet</label>
-          <input type="text" id="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="subject">Sujet</label>
-          <input type="text" id="subject">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="6" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">Envoyer</button>
-      </form>
-
-      <div style="margin-top:40px; text-align:center;">
-        <p><strong>Adresse :</strong> Mbour, Sénégal</p>
-        <p><strong>Téléphone :</strong> +221 77 XXX XX XX</p>
-        <p><strong>Email :</strong> contact@flextech.sn</p>
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <h1 class="section-title">Contactez-nous</h1>
+        <p class="page-subtitle">Un besoin, une question, une demande de devis ?</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section contact">
+      <div class="container contact-wrap">
+        <form class="contact-form fade-in">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Votre demande" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Décrivez votre besoin" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Envoyer</button>
+        </form>
+
+        <div class="contact-info fade-in">
+          <h3>Nos coordonnées</h3>
+          <p><strong>Adresse :</strong> Mbour, Sénégal</p>
+          <p><strong>Téléphone :</strong> +221 77 XXX XX XX</p>
+          <p><strong>Email :</strong> contact@flextech.sn</p>
+          <a href="https://wa.me/221770000000" class="btn-whatsapp" target="_blank" rel="noopener">
+            Contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
