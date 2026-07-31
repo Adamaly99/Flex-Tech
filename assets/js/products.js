@@ -1,8 +1,3 @@
-/* ========================================
-   FLEXTECH TEMPLATE - Produits JavaScript
-   ======================================== */
-
-// Données produits (exemple)
 const products = [
   {
     id: 1,
@@ -42,11 +37,10 @@ const products = [
   }
 ];
 
-// Fonction pour afficher les produits
 function displayProducts(productsArray, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
-  
+
   container.innerHTML = productsArray.map(product => `
     <div class="product-card fade-in">
       <div class="product-image">
@@ -57,31 +51,17 @@ function displayProducts(productsArray, containerId) {
         <p class="product-specs">${product.specs}</p>
         <p class="product-price">${product.price.toLocaleString('fr-FR')} FCFA</p>
         <div class="product-rating">${'★'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}</div>
-        <a href="https://wa.me/221770000000?text=Je suis intéressé par ${product.name}" 
+        <a href="https://wa.me/221770000000?text=Je suis intéressé par ${encodeURIComponent(product.name)}" 
            class="btn-whatsapp" target="_blank">
-          📱 Commander sur WhatsApp
+          Commander sur WhatsApp
         </a>
       </div>
     </div>
   `).join('');
-  
-  // Réinitialiser les animations pour les nouveaux éléments
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  container.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 }
 
-// Charger les produits au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-  // Produits populaires (4 premiers)
-  displayProducts(products.slice(0, 4), 'popular-products');
-  
-  // Promotions (tu peux créer un tableau séparé)
-  displayProducts(products.slice(0, 2), 'promo-products');
+  displayProducts(products, 'popular-products');
+  displayProducts(products, 'promo-products');
+  displayProducts(products, 'all-products');
 });
