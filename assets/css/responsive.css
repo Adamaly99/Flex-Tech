@@ -1,0 +1,111 @@
+/* ========================================
+   FLEXTECH TEMPLATE - Responsive CSS
+   ======================================== */
+
+/* Tablettes */
+@media (max-width: 992px) {
+  .hero .container,
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content,
+  .product-detail-info {
+    text-align: center;
+  }
+
+  .nav ul {
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header .container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .categories-grid,
+  .why-us-grid,
+  .testimonials-grid,
+  .products-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .product-detail-info h1 {
+    font-size: 30px;
+  }
+
+  .product-detail-info .product-price {
+    font-size: 24px;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .product-card,
+  .why-us-card,
+  .testimonial-card,
+  .contact-form {
+    border-radius: 10px;
+  }
+}
